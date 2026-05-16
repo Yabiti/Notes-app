@@ -22,7 +22,6 @@ const NoteCard = ({
       className="group flex flex-col rounded-lg fade-in shadow-sm border
       border-athens-gray bg-white p-5 mt-4 gap-3"
     >
-      {/* Header: Fixed with justify-between */}
       <div className="flex items-center justify-between">
         <span className="text-3xl">{note.icon}</span>
         <div className="flex gap-1">
@@ -30,7 +29,7 @@ const NoteCard = ({
             className="h-8 w-8 text-pale-sky cursor-pointer hover:text-black-pearl
             hover:bg-athens-gray font-medium rounded-md flex items-center justify-center
             text-sm"
-            onClick={() => handleEdit(note)} // Changed from note.id to note
+            onClick={() => handleEdit(note)}
           >
             <Pencil className="h-4 w-4" />
           </button>
@@ -45,7 +44,6 @@ const NoteCard = ({
         </div>
       </div>
 
-      {/* Content */}
       <div className="flex flex-col gap-2">
         <h3
           className={clsx(
@@ -60,7 +58,6 @@ const NoteCard = ({
         </p>
       </div>
 
-      {/* Footer: Added flex and fixed spacing */}
       <div className="border-t border-athens-gray pt-3 flex items-center justify-between">
         <span
           className={`text-xs font-medium text-white ${categoryobj?.color} px-2.5 py-0.5 rounded-full`}
